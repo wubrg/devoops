@@ -130,7 +130,7 @@ if "$include_casks"; then
     if "$apply" && brew list --cask --versions "$cask" >/dev/null 2>&1; then
       echo "cask already installed: $cask"
     else
-      run_or_print brew install --cask "$cask"
+      run_or_print brew install --cask --adopt "$cask"
     fi
   done < <(read_items "$CASKS_FILE")
 fi

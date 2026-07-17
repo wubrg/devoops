@@ -1,6 +1,10 @@
 bash
 bash-completion
+autojump
+atuin
 coreutils
+docker
+docker-compose
 findutils
 gh
 git
@@ -12,10 +16,7 @@ node
 openjdk
 pyenv
 python
-rbenv
-ruby
 rust
 shellcheck
-spaceship
 wget
 zsh-autosuggestions

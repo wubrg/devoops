@@ -1,4 +1,11 @@
-docker
+alfred
+dash
+diffmerge
+firefox
 kitty
+lastpass
 obsidian
+rancher
+spotify
+sourcetree
 visual-studio-code

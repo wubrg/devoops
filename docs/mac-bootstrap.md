@@ -10,12 +10,16 @@ The versioned manifests and templates in this repository are the source of truth
 
 - \`config/homebrew/formulae.txt\` contains general development formulae.
 - \`config/homebrew/casks.optional.txt\` contains optional GUI applications.
+- Existing applications are adopted into Homebrew when possible so both devices can use one manifest.
+- Rancher Desktop is the container runtime; the Docker-compatible CLI is managed separately from the desktop runtime.
 - Nothing is installed by default.
 - Legacy enterprise, infrastructure, credential, and VPN tooling is deliberately absent.
 
 ## Shell and Kitty policy
 
 Templates are stored under \`dotfiles/\` and can be previewed or linked under \`~/.config/devoops/\`. The bootstrap script does not replace \`~/.zshrc\` or an active Kitty configuration. A user may add an explicit source line to an existing shell configuration after reviewing the rendered files.
+
+The shared shell path includes the VS Code application CLI directory, so \`code\` is available after the managed entrypoint is sourced. The current device already has a valid \`/usr/local/bin/code\` link.
 
 Local overrides, if needed, belong only in:
 
