@@ -94,10 +94,12 @@ if "$link_dotfiles"; then
   link_template "$ROOT/dotfiles/shell/path.zsh" "$HOME/.config/devoops/shell/path.zsh"
   link_template "$ROOT/dotfiles/shell/aliases.common.zsh" "$HOME/.config/devoops/shell/aliases.common.zsh"
   link_template "$ROOT/dotfiles/shell/functions.common.zsh" "$HOME/.config/devoops/shell/functions.common.zsh"
-  link_template "$ROOT/dotfiles/shell/profile.personal.zsh" "$HOME/.config/devoops/shell/profile.personal.zsh"
   link_template "$ROOT/dotfiles/kitty/kitty.conf" "$HOME/.config/devoops/kitty/kitty.conf"
   if [[ ! -e "$HOME/.config/devoops/shell/local.zsh" ]]; then
     run_or_print cp "$ROOT/dotfiles/shell/local.example.zsh" "$HOME/.config/devoops/shell/local.zsh"
+  fi
+  if [[ ! -e "$HOME/.config/devoops/kitty/local.conf" ]]; then
+    run_or_print cp "$ROOT/dotfiles/kitty/local.example.conf" "$HOME/.config/devoops/kitty/local.conf"
   fi
 fi
 

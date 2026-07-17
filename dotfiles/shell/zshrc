@@ -21,11 +21,12 @@ if command -v atuin >/dev/null 2>&1; then
   eval "$(atuin init zsh)"
 fi
 
+devoops_config_dir="${DEVOOPS_CONFIG_DIR:-$HOME/.config/devoops}"
+
 for file in \
-  "$HOME/.config/devoops/shell/path.zsh" \
-  "$HOME/.config/devoops/shell/aliases.common.zsh" \
-  "$HOME/.config/devoops/shell/functions.common.zsh" \
-  "$HOME/.config/devoops/shell/profile.personal.zsh" \
-  "$HOME/.config/devoops/shell/local.zsh"; do
+  "$devoops_config_dir/shell/path.zsh" \
+  "$devoops_config_dir/shell/aliases.common.zsh" \
+  "$devoops_config_dir/shell/functions.common.zsh" \
+  "$devoops_config_dir/shell/local.zsh"; do
   [[ -r "$file" ]] && source "$file"
 done

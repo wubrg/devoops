@@ -10,7 +10,7 @@ Included:
 
 - Homebrew formulae for general development work.
 - Optional GUI applications for development and personal productivity.
-- Sanitized zsh and Kitty starter templates.
+- Portable zsh and Kitty templates with untracked machine-local override hooks.
 - Dry-run-first bootstrap commands.
 
 Excluded:
