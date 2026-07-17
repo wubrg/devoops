@@ -1,0 +1,7 @@
+.DS_Store
+.env
+.env.*
+*.local
+local/
+dotfiles/shell/local.zsh
+dotfiles/kitty/local.conf

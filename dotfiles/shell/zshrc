@@ -1,0 +1,28 @@
+# Personal devoops zsh entrypoint.
+# Source this from an existing ~/.zshrc after reviewing it.
+
+export ZSH="${ZSH:-$HOME/.oh-my-zsh}"
+export EDITOR="${EDITOR:-code -w}"
+
+plugins=(
+  brew
+  git
+  history
+  history-substring-search
+  python
+  ruby
+  rbenv
+)
+
+if [[ -r "$ZSH/oh-my-zsh.sh" ]]; then
+  source "$ZSH/oh-my-zsh.sh"
+fi
+
+for file in \
+  "$HOME/.config/devoops/shell/path.zsh" \
+  "$HOME/.config/devoops/shell/aliases.common.zsh" \
+  "$HOME/.config/devoops/shell/functions.common.zsh" \
+  "$HOME/.config/devoops/shell/profile.personal.zsh" \
+  "$HOME/.config/devoops/shell/local.zsh"; do
+  [[ -r "$file" ]] && source "$file"
+done
